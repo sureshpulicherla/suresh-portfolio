@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#080c12">
+  <script>/* Apply saved theme before first paint to avoid flashing. */
+  try { document.documentElement.dataset.theme = localStorage.getItem("suresh-portfolio-color-theme") === "light" ? "light" : "dark"; } catch (e) {}
+  </script>
+  <meta name="description" content="Suresh Pulicherla — software, enterprise operations and creative web experiments. Explore projects, experience and immersive concepts.">
+  <meta property="og:title" content="Suresh Pulicherla — Across worlds, I build.">
+  <meta property="og:description" content="Software. Operations. Creative experiments. A personal portfolio of work and ideas.">
+  <meta property="og:type" content="website">
+  <title>Suresh Pulicherla — Built Across Worlds</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="css/styles.css">
+  <script defer src="js/data.js"></script>
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <script defer src="js/bike3d.js"></script>
+  <script defer src="js/app.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to content</a>
+  <div id="noise" aria-hidden="true"></div>
+  <div class="cursor-glow" id="cursor-glow" aria-hidden="true"></div>
+  <header class="site-header" id="site-header">
+    <a class="wordmark" href="#home" aria-label="Suresh Pulicherla, home"><span class="brand-mark">S<span class="brand-dot">.</span>P</span><span class="brand-name" id="brand-name">SURESH<br>PULICHERLA</span></a>
+    <nav class="desktop-nav" aria-label="Primary navigation">
+      <a href="#work">WORK</a><a href="#experience">JOURNEY</a><a href="#lab">EXPERIMENTS</a><a href="#about">ABOUT</a>
+    </nav>
+    <div class="header-actions"><button type="button" class="theme-toggle" id="theme-toggle" aria-label="Switch to light mode" aria-pressed="false" title="Switch color theme"><span class="theme-toggle-icon" aria-hidden="true">☀</span><span class="theme-toggle-label">LIGHT MODE</span></button><a href="#contact" class="nav-cta">LET'S CONNECT <span aria-hidden="true">↗</span></a><button class="mobile-menu-btn" id="menu-btn" aria-expanded="false" aria-controls="mobile-nav" aria-label="Open menu"><span></span><span></span></button></div>
+    <nav class="mobile-nav" id="mobile-nav" aria-label="Mobile navigation" hidden><a href="#work">Work</a><a href="#experience">Journey</a><a href="#lab">Experiments</a><a href="#about">About</a><a href="#contact">Connect</a></nav>
+  </header>
+
+  <main id="main-content">
+    <div id="page-main">
+      <section class="hero section" id="home" aria-labelledby="hero-heading">
+        <div class="hero-grid-lines" aria-hidden="true"></div>
+        <div class="hero-light" aria-hidden="true"></div>
+        <div class="hero-portrait-wrap" aria-hidden="true"><img id="hero-portrait" src="assets/profile.webp" width="896" height="1200" alt="" fetchpriority="high"></div>
+        <div class="container hero-content">
+          <div class="hero-index"><span class="pulse-dot"></span><span>WELCOME TO MY DIGITAL SPACE</span><span class="hero-index-year">/ PORTFOLIO '26</span></div>
+          <p class="hero-kicker" id="hero-eyebrow">SOFTWARE <span>/</span> OPERATIONS <span>/</span> CREATIVE EXPERIMENTS</p>
+          <h1 id="hero-heading"><span>ACROSS</span><span class="outline-word">WORLDS,</span><span class="hero-title-bottom">I <em>BUILD.</em><span class="asterisk" aria-hidden="true">✳</span></span></h1>
+          <p class="hero-copy" id="hero-bio">I work at the intersection of software, real-world operations, and creative digital experiences.</p>
+          <div class="hero-buttons"><a href="#work" class="btn btn-primary">EXPLORE MY WORK <span aria-hidden="true">↗</span></a><a href="#contact" class="btn btn-ghost">GET IN TOUCH <span aria-hidden="true">↗</span></a></div>
+          <div class="hero-bottom"><span><span class="micro-label">BASED IN</span><strong id="hero-location">BENGALURU, INDIA</strong></span><span><span class="micro-label">RECOGNITION</span><strong id="hero-award">RISING STAR · 2026</strong></span><span class="scroll-cue"><span class="scroll-line"></span>SCROLL TO EXPLORE</span></div>
+        </div>
+        <div class="hero-side-label" aria-hidden="true">SELECTED WORK · JOURNEY · IDEAS</div>
+      </section>
+
+      <div class="marquee" aria-label="Software, operations, creative technology, and digital experiences"><div class="marquee-track" aria-hidden="true"><span>SOFTWARE ENGINEERING <b>✳</b> ENTERPRISE OPERATIONS <b>✳</b> CREATIVE TECHNOLOGY <b>✳</b> NEVER STOP EXPLORING <b>✳</b> SOFTWARE ENGINEERING <b>✳</b> ENTERPRISE OPERATIONS <b>✳</b> CREATIVE TECHNOLOGY <b>✳</b> NEVER STOP EXPLORING <b>✳</b></span></div></div>
+
+      <section class="section work-section" id="work" aria-labelledby="work-title"><div class="container">
+        <div class="section-head"><div><span class="eyebrow"><i></i> 01 / SELECTED WORK</span><h2 id="work-title">Things I've <em>made.</em></h2></div><p>Code, problem-solving, and ideas brought to life. Every project is part of the journey.</p></div>
+        <div class="filter-row" role="group" aria-label="Filter projects"><button class="filter active" data-filter="all" aria-pressed="true">ALL WORK <span>06</span></button><button class="filter" data-filter="software" aria-pressed="false">SOFTWARE <span>04</span></button><button class="filter" data-filter="creative" aria-pressed="false">CREATIVE LAB <span>02</span></button></div>
+        <div class="projects-grid" id="projects-grid" aria-live="polite"></div>
+        <p class="section-footnote">The website previews are interactive demonstrations. Original project walkthroughs are linked where available.</p>
+      </div></section>
+
+      <section class="section journey-section" id="experience" aria-labelledby="journey-title"><div class="container journey-grid">
+        <div class="journey-intro"><span class="eyebrow"><i></i> 02 / THE JOURNEY</span><h2 id="journey-title">Different paths.<br><em>One mindset.</em></h2><p>Software development, client-facing operations, and insurance delivery each taught me something different. I bring all of it into what I build next.</p><div class="journey-stamp"><strong>ALWAYS</strong><span>LEARNING<br>BY DOING ↗</span></div></div>
+        <div id="experience-list" class="experience-list"></div>
+      </div></section>
+
+      <section class="section lab-section" id="lab" aria-labelledby="lab-title"><div class="container">
+        <div class="section-head"><div><span class="eyebrow"><i></i> 03 / EXPERIMENTAL LAB</span><h2 id="lab-title">Made to be <em>experienced.</em></h2></div><p>Two different worlds, one curiosity: what happens when design becomes interactive?</p></div>
+        <div class="lab-grid"><button class="lab-card lab-bike" data-route="bikes" aria-label="Enter Apex Garage interactive motorcycle showroom"><img src="assets/bike_showroom.webp" loading="lazy" width="1376" height="768" alt="Futuristic concept motorcycle in a neon-lit studio"><span class="lab-shade"></span><span class="lab-topline">EXPERIMENT 001 <span>3D / INTERACTIVE</span></span><span class="lab-bottom"><span><small>THE MACHINE WORLD</small><strong>APEX<br>GARAGE</strong><span class="lab-descr">Customize. Rotate. Explore.</span></span><span class="lab-arrow" aria-hidden="true">↗</span></span></button><button class="lab-card lab-divine" data-route="divine" aria-label="Enter Divine Atlas temple-inspired cultural showcase"><img src="assets/divine_temple.webp" loading="lazy" width="1376" height="768" alt="Golden, temple-inspired fantasy architecture at dusk"><span class="lab-shade"></span><span class="lab-topline">EXPERIMENT 002 <span>CULTURE / ATMOSPHERE</span></span><span class="lab-bottom"><span><small>THE SACRED WORLD</small><strong>DIVINE<br>ATLAS</strong><span class="lab-descr">Explore. Listen. Reflect.</span></span><span class="lab-arrow" aria-hidden="true">↗</span></span></button></div>
+      </div></section>
+
+      <section class="section about-section" id="about" aria-labelledby="about-title"><div class="container about-grid"><div class="about-art" aria-hidden="true"><div class="about-orbit orbit-one"></div><div class="about-orbit orbit-two"></div><div class="about-core">S<span>.</span>P</div><span class="orbit-word word-one">BUILD</span><span class="orbit-word word-two">LEARN</span><span class="orbit-word word-three">EXPLORE</span></div><div class="about-copy"><span class="eyebrow"><i></i> 04 / A LITTLE ABOUT ME</span><h2 id="about-title">Not one label.<br><em>Many interests.</em></h2><p>I'm Suresh. My background moves from mechanical engineering to Java development and real-world enterprise operations. Along the way, I've also been exploring interactive websites, immersive visuals, and new ideas.</p><p>I care about details, useful systems, and work I can stand behind. This space is a living record of all of it — not just one job title.</p><div class="about-pills"><span>JAVA & SPRING BOOT</span><span>COMMERCIAL P&C</span><span>CREATIVE WEB</span><span>PROBLEM SOLVING</span></div></div></div></section>
+
+      <section class="contact-section" id="contact" aria-labelledby="contact-title"><div class="container contact-inner"><span class="eyebrow"><i></i> 05 / LET'S TALK</span><h2 id="contact-title">GOT AN IDEA?<br><em>LET'S BUILD.</em></h2><p>New roles, collaborations, interesting problems, or simply a hello — my inbox is open.</p><div class="contact-actions"><a id="email-link" class="btn btn-light" href="mailto:sureshpulicherla3@gmail.com">SEND AN EMAIL <span aria-hidden="true">↗</span></a><a id="linkedin-link" class="btn btn-border" href="https://www.linkedin.com/in/sureshpulicherla/" target="_blank" rel="noopener noreferrer">LINKEDIN <span aria-hidden="true">↗</span></a><button class="btn btn-border" id="copy-email">COPY EMAIL <span aria-hidden="true">⧉</span></button></div><div class="contact-backdrop" aria-hidden="true">CONNECT</div></div></section>
+    </div>
+
+    <section id="page-bikes" class="experience-page bike-page" hidden aria-labelledby="bike-title">
+      <div class="experience-bg bike-exp-bg"></div><div class="container experience-content">
+        <div class="experience-top"><button class="back-link" data-route="main">← BACK TO PORTFOLIO</button><span class="experience-top-right">APEX / DIGITAL GARAGE · 001</span></div>
+        <div class="experience-head"><span class="eyebrow cyan"><i></i> THE MACHINE WORLD / INTERACTIVE EXPERIMENT</span><h1 id="bike-title">ENGINEERED<br><em>TO IMAGINE.</em></h1><p>An original concept motorcycle viewer. Drag to rotate the 3D model, change its finish, and configure your build.</p></div>
+        <div class="garage-layout"><div class="garage-sidebar">
+          <div class="garage-heading"><span>01 / SELECT YOUR MACHINE</span><span class="garage-live"><i></i> CONCEPT LAB</span></div><div class="model-switch" id="model-switch"></div>
+          <div class="control-group"><span class="control-label">02 / PAINT FINISH</span><div id="paint-picker" class="paint-picker"></div></div>
+          <div class="control-group"><label class="control-label" for="exhaust-select">03 / EXHAUST</label><select id="exhaust-select" class="garage-select"></select></div>
+          <div class="control-group"><label class="control-label" for="wheel-select">04 / WHEELS</label><select id="wheel-select" class="garage-select"></select></div>
+          <div class="garage-disclaimer">Fictional concept bikes. All performance and pricing values are illustrative, not manufacturer specifications or sales quotes.</div>
+        </div><div class="garage-stage"><div class="stage-top"><span>APEX / REAL-TIME 3D CONCEPT</span><span id="viewer-status"><span class="online-dot"></span> VIEWER READY</span></div><canvas id="bike-canvas" aria-label="Rotatable 3D concept motorcycle"></canvas><img src="assets/bike_showroom.webp" alt="Concept motorcycle fallback render" id="bike-fallback" hidden><div class="stage-glow" aria-hidden="true"></div><div class="stage-bottom"><span>DRAG TO ROTATE • SCROLL TO ZOOM</span><div><button class="icon-btn" id="bike-left" aria-label="Rotate bike left">↶</button><button class="icon-btn" id="bike-reset" aria-label="Reset bike view">⟲</button><button class="icon-btn" id="bike-right" aria-label="Rotate bike right">↷</button></div></div></div></div>
+        <div class="garage-specs"><div><span>MODEL</span><strong id="spec-model">APEX V4R</strong></div><div><span>OUTPUT</span><strong id="spec-hp">226 <small>HP</small></strong></div><div><span>TORQUE</span><strong id="spec-torque">115 Nm</strong></div><div><span>TOP SPEED*</span><strong id="spec-speed">312 km/h</strong></div><div class="price-spec"><span>CONCEPT BUILD ESTIMATE*</span><strong id="spec-price">₹28,55,000</strong></div></div>
+        <div class="experience-end"><p>*Illustrative specification and price, not a product offering.</p><button class="back-link" data-route="main">EXPLORE OTHER WORK ↗</button></div>
+      </div>
+    </section>
+
+    <section id="page-divine" class="experience-page divine-page" hidden aria-labelledby="divine-title">
+      <div class="divine-scenery" aria-hidden="true"><img src="assets/divine_temple.webp" alt=""><div class="divine-overlay"></div></div><div class="container divine-content"><div class="experience-top"><button class="back-link" data-route="main">← BACK TO PORTFOLIO</button><span class="experience-top-right">DIVINE / CULTURAL ATLAS · 002</span></div>
+      <div class="divine-hero"><span class="eyebrow gold"><i></i> THE SACRED WORLD / DESIGN EXPERIMENT</span><span class="divine-symbol" aria-hidden="true">✺</span><h1 id="divine-title">WHERE TIME<br><em>STANDS STILL.</em></h1><p>A digital tribute to sacred South Indian architecture, history and atmosphere. An exploration in design — not a substitute for visiting or researching the real places.</p><div class="divine-actions"><button type="button" id="temple-explore-link" class="btn btn-gold">EXPLORE THE ATLAS <span aria-hidden="true">↓</span></button><button class="btn btn-soft-gold" id="ambient-btn" aria-pressed="false">♪ PLAY AMBIENT SOUND</button></div></div>
+      <div class="temple-panel" id="temple-explorer"><div class="temple-panel-head"><span>THREE PLACES / THREE STORIES</span><span>SELECT A PLACE BELOW ↘</span></div><div class="temple-selector" id="temple-selector"></div><article class="temple-detail" id="temple-detail" aria-live="polite"></article><div class="divine-note">Background artwork is an imaginative composite, not a photograph of any listed temple. Optional audio is an original synthesized ambient tone; no frequency or health benefit is claimed.</div></div><div class="experience-end"><span>AN EXPERIMENT IN CULTURE & CODE</span><button class="back-link" data-route="main">EXPLORE OTHER WORK ↗</button></div></div>
+    </section>
+  </main>
+
+  <footer class="site-footer" id="site-footer"><div class="container footer-grid"><span class="wordmark footer-logo">S<span class="brand-dot">.</span>P</span><span>DESIGNED TO KEEP EVOLVING.</span><span>© <span id="year">2026</span> <span id="footer-name">SURESH PULICHERLA</span></span><a href="#home">BACK TO TOP ↑</a></div></footer>
+
+  <dialog class="project-dialog" id="project-dialog" aria-labelledby="dialog-title"><div class="dialog-inner"><button class="dialog-close" id="dialog-close" aria-label="Close project details">×</button><div id="dialog-content"></div></div></dialog>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <div class="studio-fab" id="studio-fab" hidden><button id="studio-open">✎ OPEN STUDIO</button><button id="studio-export">↓ EXPORT DATA.JS</button><button id="studio-reset">↺ RESET PREVIEW</button></div>
+  <dialog class="studio-dialog" id="studio-dialog" aria-labelledby="studio-title"><div class="studio-inner"><div class="studio-top"><div><span class="eyebrow">LOCAL CONTENT EDITOR</span><h2 id="studio-title">Portfolio Studio</h2><p>Changes preview in this browser only. Export data.js and replace js/data.js in your website folder, then deploy.</p></div><button id="studio-close" aria-label="Close editor">×</button></div><div class="studio-tabs"><button class="studio-tab active" data-edit-view="profile">PROFILE</button><button class="studio-tab" data-edit-view="projects">PROJECTS</button><button class="studio-tab" data-edit-view="experience">EXPERIENCE</button></div><div id="studio-body"></div><div class="studio-bottom"><button id="studio-export-inside" class="btn btn-primary">EXPORT DATA.JS ↓</button><span>Your changes are not published until you replace the file on GitHub.</span></div></div></dialog>
+</body>
+</html>
